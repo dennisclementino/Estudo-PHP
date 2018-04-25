@@ -9,6 +9,6 @@
 <html>
     <header><title> Minha vendinha</title></header>
     <body>
-        <a href="./Controller.php?controller=pedido&action=list">Listar Pedido</a>
+        <a href="../controller/mapper.php?controller=produto&action=index">Meus Produtos</a>
     </body>
 </html>

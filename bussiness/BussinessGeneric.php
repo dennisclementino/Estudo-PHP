@@ -12,7 +12,7 @@
  * @author dennis.silva
  */
 
-include '../Interface/IBussinessGeneric.php';
+include '../interface/IBussinessGeneric.php';
 
 class BussinessGeneric implements IBussinessGeneric {
     //put your code here

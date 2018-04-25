@@ -19,7 +19,6 @@ class Produto {
     private $nome;
     private $valor;
     
-    
     function getId() {
         return $this->id;
     }
@@ -52,6 +51,14 @@ class Produto {
         $this->valor = $valor;
     }
 
+    function setClass($data){
+        
+        $this->setId(isset($data['id'])? $data['id']:'');
+        $this->setCod(isset($data['cod'])? $data['cod']:'');
+        $this->setNome(isset($data['nome_produto'])? $data['nome_produto']:'');
+        $this->setValor(isset($data['valor'])? $data['valor']:'');
+        
+    }
 
     
 }
