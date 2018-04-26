@@ -31,7 +31,7 @@ class BussinessProduto extends ModelProduto {
 
     public function save() {
         $this->produto->setClass($_POST);
-        return $this->salve('produto',$this->produto);
+        return $this->salve('produto',$this->produto->getArrayCopy());
     }
 
 }

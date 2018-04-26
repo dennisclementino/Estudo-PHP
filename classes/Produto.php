@@ -11,54 +11,71 @@
  *
  * @author dennis.silva
  */
-class Produto {
-    //put your code here
-    
+
+include '../Interface/IClass.php';
+
+class Produto implements IClass{
+
     private $id;
-    private $cod;
-    private $nome;
+    private $codigo;
+    private $nome_produto;
     private $valor;
+    private $descricao;
     
-    function getId() {
+    public function getObjectVars() {
+        return get_object_vars($this);
+    }
+
+    public function setClass($data) {
+
+        $this->setId(isset($data['id']) ? $data['id'] : '');
+        $this->setCodigo(isset($data['codigo']) ? $data['codigo'] : '');
+        $this->setNome_produto(isset($data['nome_produto']) ? $data['nome_produto'] : '');
+        $this->setValor(isset($data['valor']) ? $data['valor'] : '');
+        $this->setDescricao(isset($data['descricao']) ? $data['descricao'] : '');
+        
+    }
+    
+    public function getId() {
         return $this->id;
     }
 
-    function getCod() {
-        return $this->cod;
+    public function getCodigo() {
+        return $this->codigo;
     }
 
-    function getNome() {
-        return $this->nome;
+    public function getNome_produto() {
+        return $this->nome_produto;
     }
 
-    function getValor() {
+    public function getValor() {
         return $this->valor;
     }
 
-    function setId($id) {
+    public function getDescricao() {
+        return $this->descricao;
+    }
+
+    public function setId($id) {
         $this->id = $id;
     }
 
-    function setCod($cod) {
-        $this->cod = $cod;
+    public function setCodigo($codigo) {
+        $this->codigo = $codigo;
     }
 
-    function setNome($nome) {
-        $this->nome = $nome;
+    public function setNome_produto($nome_produto) {
+        $this->nome_produto = $nome_produto;
     }
 
-    function setValor($valor) {
+    public function setValor($valor) {
         $this->valor = $valor;
     }
 
-    function setClass($data){
-        
-        $this->setId(isset($data['id'])? $data['id']:'');
-        $this->setCod(isset($data['cod'])? $data['cod']:'');
-        $this->setNome(isset($data['nome_produto'])? $data['nome_produto']:'');
-        $this->setValor(isset($data['valor'])? $data['valor']:'');
-        
+    public function setDescricao($descricao) {
+        $this->descricao = $descricao;
     }
 
-    
+
+
 }

@@ -72,6 +72,10 @@ class ModelGeneric extends Connect implements IModelGeneric {
     }
 
     public function salve($table, $dados) {
+        
+        var_dump($dados);
+        die('77');
+        
          try {
 
             $list = $this->query('select * from ' . $table . ' where :id', array('id' => $id));
