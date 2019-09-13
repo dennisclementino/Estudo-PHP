@@ -10,5 +10,7 @@
     <header><title> Minha vendinha</title></header>
     <body>
         <a href="../controller/mapper.php?controller=produto&action=index">Meus Produtos</a>
+        <br>
+        <a href="../controller/mapper.php?controller=usuario&action=index">Meus Usuario</a>
     </body>
 </html>

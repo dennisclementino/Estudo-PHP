@@ -27,23 +27,19 @@
         </style>
     </header>
     <body>
-        <h1>Lista de Produto</h1>
-        <a href="../controller/mapper.php?controller=produto&action=forn">Adicionar Produto</a>
+        <h1>Lista de Usuario</h1>
+        <a href="../controller/mapper.php?controller=usuario&action=forn">Adicionar Usuario</a>
         <table  class="table">
         <tr>
             <th>Id</th>
-            <th>Codigo</th>
-            <th>Nome Produto</th>
-            <th>Descri&ccedil;&atilde;o</th>
+            <th>Nome</th>
             <th>A&ccedil;&atilde;o</th>
         </tr>
         <?php foreach ($return as $value) : ?>
             <tr>
                 <td><?php echo $value['id'] ?></td>
-                <td><?php echo $value['codigo'] ?></td>
-                <td><?php echo $value['nome_produto'] ?></td>
-                <td><?php echo $value['descricao'] ?></td>
-                <td><?php echo $value['descricao'] ?></td>
+                <td><?php echo $value['nome'] ?></td>
+                <td>Edita<br>Excluir</td>
             </tr>
         <?php endforeach; ?>
     </table>

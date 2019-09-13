@@ -16,11 +16,11 @@ class Connect {
     //put your code here
 
     const USERNAME = "root";
-    const PASSWORD = "Redes21220";
-    const HOST = "192.168.10.10";
-    const DB = "prova_dennis";
+    const PASSWORD = "";
+    const HOST = "localhost";
+    const DB = "login";
 
-    private function getConnection() {
+    public function getConnection() {
 
         try {
 
@@ -37,13 +37,13 @@ class Connect {
         }
     }
 
-    protected function query($sql) {
+    public function query($sql) {
         $connection = $this->getConnection();
         $stmt = $connection->query($sql);
         return $stmt;
     }
 
-    protected function queryArgs($sql, $args) {
+    public function queryArgs($sql, $args) {
         $connection = $this->getConnection();
         $stmt = $connection->prepare($sql);
         $stmt->execute($args);

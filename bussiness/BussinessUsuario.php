@@ -11,27 +11,26 @@
  *
  * @author dennis.silva
  */
-include '../model/ModelProduto.php';
-include '../classes/Produto.php';
+include '../model/ModelUsuario.php';
+include '../classes/Usuario.php';
 
-class BussinessProduto extends ModelProduto {
+class BussinessUsuario extends ModelUsuario {
 
     //put your code here
-
-    private $produto;
+    private $usuario;
 
     public function __construct() {
-        $this->produto = new Produto();
+        $this->usuario = new Usuario();
     }
 
     public function index() {
 
-        return $this->listAll('produto');
+       return $this->listAll('usuario');
     }
 
     public function save() {
-        $this->produto->setClass($_POST);
-        return $this->salve('produto',$this->produto->getArrayCopy());
+        $this->usuario->setClass($_POST);
+        return $this->salvar('usuario',$this->usuario->getArrayCopy());
     }
 
 }

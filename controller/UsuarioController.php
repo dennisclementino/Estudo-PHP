@@ -11,30 +11,32 @@
  *
  * @author dennis.silva
  */
-include '../bussiness/BussinessProduto.php';
+include '../bussiness/BussinessUsuario.php';
 
-class ProdutoController {
+class UsuarioController {
 
     //put your code here
 
-    private $bussinessProduto;
+    private $bussiness;
 
     public function __construct() {
-        $this->bussinessProduto = new BussinessProduto();
+        $this->bussiness = new BussinessUsuario();
     }
 
     public function index() {
-        $return = $this->bussinessProduto->index();
-        include '../View/produto/index.php';
+        $return = $this->bussiness->index();
+        include '../View/usuario/index.php';
     }
     
     
     public function forn(){
-        include '../View/produto/forn.php';
+        include '../View/usuario/forn.php';
     }
     
     public function save(){
-        $this->bussinessProduto->save();
+        $this->bussiness->save();
+        $return = $this->bussiness->index();
+        include '../View/usuario/index.php';
     }
     
     
